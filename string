@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    printf("Basic String Operations\n");
+
+   
+    char brand1[] = "Lenovo";
+    printf("1. Length of '%s': %lu\n", brand1, strlen(brand1));
+
+    
+    char b1[20] = "Dell";
+    char b2[] = "HP";
+    strcat(b1, b2);
+    printf("2. Concatenated String: %s\n", b1);
+
+    
+    char brand3[] = "Asus";
+    printf("3. 2nd character in '%s': %c\n", brand3, brand3[1]);
+
+    
+    char brand4[] = "Apple";
+    printf("4. Characters in '%s':\n", brand4);
+    for (int i = 0; brand4[i] != '\0'; i++) {
+        printf("%c\n", brand4[i]);
+    }
+
+    
+    char brand5[] = "acer";
+    for (int i = 0; brand5[i] != '\0'; i++) {
+        brand5[i] = toupper(brand5[i]);
+    }
+    printf("5. Uppercase: %s\n", brand5);
+
+    printf("\n=== Level 2: Intermediate String Operations ===\n");
+
+
+    char brand6[] = "MSI";
+    printf("6. Reversed '%s': ", brand6);
+    for (int i = strlen(brand6) - 1; i >= 0; i--) {
+        printf("%c", brand6[i]);
+    }
+    printf("\n");
+}
